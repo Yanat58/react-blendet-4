@@ -19,8 +19,7 @@ export const SearchForm = () => {
   const handleSubmit = e => {
     e.preventDefault();
     const isExistTodo = todos.find(
-      todo =>
-        todo.text.toLowerCase().trim() === query.toLocaleLowerCase().trim()
+      todo => todo.text.toLowerCase().trim() === query.toLowerCase().trim()
     );
     if (isExistTodo) return alert('Todo already exist');
     const todo = {
